@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "240b5bdf-9b42-40e5-b4b7-ab1bcd5a717e",
+		"name": "NLW #2 - Proffy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Classes",
+			"item": [
+				{
+					"name": "Criar Aula",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Carlos Hollerveger\",\n    \"avatar\": \"https://media-exp1.licdn.com/dms/image/C4D03AQEfDPAsecVEQQ/profile-displayphoto-shrink_200_200/0?e=1602720000&v=beta&t=JRKEZNIUK87BstXYmDNivVz6Y2x_mshrJMlZv0hRItw\",\n    \"whatsapp\": \"51980285477\",\n    \"bio\": \"Desenvolvimento de APIs com Node.js, Desenvolvimento de microsserviços AWS Lambda com TypeScript, Documentação de APIs com Serverless AWS Documentation, Testes Unitários com Jest e Mocks Objects, Testes Automatizados com Java, JUnit e Rest-Assured, Testes Funcionais, Testes de integração, Metodologia ágil com Scrum;\",\n    \"subject\": \"Desenvolvimento de Sistemas\",\n    \"cost\": 80,\n    \"schedule\": [\n        {\n            \"week_day\": 1,\n            \"from\": \"8:00\",\n            \"to\": \"12:00\"\n        },\n        {\n            \"week_day\": 3,\n            \"from\": \"10:00\",\n            \"to\": \"18:00\"\n        },\n                {\n            \"week_day\": 4,\n            \"from\": \"8:00\",\n            \"to\": \"12:00\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/classes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Aulas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/classes?week_day=1&subject=Desenvolvimento de Sistemas&time=9:00",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"classes"
+							],
+							"query": [
+								{
+									"key": "week_day",
+									"value": "1"
+								},
+								{
+									"key": "subject",
+									"value": "Desenvolvimento de Sistemas"
+								},
+								{
+									"key": "time",
+									"value": "9:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Connections",
+			"item": [
+				{
+					"name": "Criar Conexões",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/connections",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"connections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Conexões",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/connections",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"connections"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "100b0c47-a6b4-475e-8351-15f3d9dbbdc3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "67f9263e-9fcb-41ec-88f9-3bf76866ddf3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "82d297e8-3eb0-4a8e-a3b5-1e840a0507a3",
+			"key": "url",
+			"value": "http://localhost:3333"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
